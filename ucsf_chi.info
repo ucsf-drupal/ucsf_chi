@@ -2,6 +2,7 @@ name        = UCSF CHI Theme
 description = Sub theme of the ucsf_base theme, developed by The Center for HIV Information (chi.ucsf.edu). SASS/COMPASS based. 
 screenshot  = screenshot.png
 core        = 7.x
+version     = 7.x-1.0
 
 base theme  = ucsf_base
 
