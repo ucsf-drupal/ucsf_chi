@@ -1,0 +1,621 @@
+.form-type-textfield {
+    border: 1px solid #ccc;
+}
+.top-region-container  {
+    padding-bottom: 2px;
+}
+/* top-header-region */
+.top-header-region {
+	nav ul.menu {
+		li {
+			font-size: .8em;
+                 &:last-child {
+                        border-right: none;
+                 }
+                 &:first-child {
+                    a {
+                        padding-left: 5em;
+                    }
+                 }
+		}
+
+	}
+}
+/* Header customized for theme */
+.header-container {
+        background: url("../images/header-bk.png") repeat-x bottom left $header-background-color;
+	/* Logo / Title */
+
+
+	.siteinfo {
+          padding-top: 15px;
+          padding-bottom: 10px;
+          figure {
+            display: inline-block;
+            img {
+              padding: 0;
+              margin: 0;
+            }
+          }
+          hgroup {
+            display: inline-block;
+            vertical-align: top;
+          }
+          h1 {
+                  font-size: 2.2em;
+                  font-weight: 300;
+                  padding: 0;
+                  line-height: 1em;
+                  text-indent: 0;
+                  font-family: $main-font;
+                  letter-spacing: normal;
+                  a {
+                      display: inline;
+                      height: auto;
+                      width: auto;
+                      background: none;
+                      text-decoration: none;
+                      color: $page-headers;
+                      .site-sub-name {
+                        font-family: $secondary-font;
+                        color: $page-main-title !important;
+                      }
+                  }
+          }
+          h2 {
+            font-family: $main-font;
+            font-size: 1em;
+            color: #5E9BA6;
+            font-weight: 300;
+            padding-left: 3px;
+            line-height: 1em;
+          }
+        }
+	/* Main Navigation */
+	header nav {
+		border-radius: 5px 5px 0 0;
+		
+		ul.menu {
+			position: relative;
+			margin-bottom: 2em;
+			margin: 0;
+
+			&:after { @extend .clearfix-after; }
+
+			li {
+				cursor: pointer;
+				float: left;
+				font-size: 1em;
+				padding: 0 2%;
+				position: relative;
+				margin:0;
+				list-style: none; }
+
+			li a {
+				display: block;
+				font-size: 1em;
+				padding: .7em 0;
+				text-align: center;
+				&:hover { text-decoration: none; }
+			}
+			// This adds the little arrow under active menu item
+			// fall back is no arrow on item, content still usable.
+			li.active::after {
+				content: ".";
+				position: absolute;
+				top: 100%;
+				left: 0;
+				display: block;
+				background: none;
+				margin: 0 0 0 44%;
+				width: 0;
+				height: 0;
+				// border-left:5px solid transparent;
+				// border-right:5px solid transparent;
+				// border-top: 5px solid $main-menu-hover;
+				font-size: 0;
+				line-height: 0;
+			}
+
+		}
+	}
+
+}
+// Sidebars related.
+.sidebar-first.col, .sidebar-second.col{
+	// Nav styles for lsited items
+	nav[role='navigation'] {
+		background: #FFF;
+		h2.title {
+			font-size: 14px;
+			text-transform: uppercase;
+			line-height: 1em;
+                        margin-bottom: 0;
+                        font-weight: bold;
+                        padding: 15px;
+			a {
+                            display: block;
+                            text-decoration: none;
+                        }
+
+		}
+
+		@include border-radius(3px);
+
+		ul {
+			&, li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			li a{
+				border-top: 1px solid #ccc;
+				display: block;
+				padding: 15px;
+                                text-decoration: none;
+			}
+			ul li {
+				border-left: 10px solid #ccc;
+			}
+			a:hover, li.active + a {
+			    background: #eee;
+			    }
+                        li {
+                            ul {
+                                display:none;
+                            }
+                        }
+                        li.active-trail {
+			  li.active-trail {
+			    ul {
+			      display: inherit;
+			    }
+			  }
+                            ul {
+                                display: inherit;
+                                ul {
+                                    display:none;
+                                }
+                            }
+                        }
+                        li.active {
+			  a {
+			    color: $body-link-active;
+			  }
+			  li {
+			    a {
+			      color: $body-link;
+			    }
+			  }
+                            ul {
+                                display: inherit !important;
+                                ul {
+                                    display:none !important;
+                                }
+                            }
+                        }
+		}
+	}
+
+	.block {
+		position: relative;
+		margin-bottom: 35px;
+		.views-field-title { font-size: 1em; }
+		&:last-child {
+			margin-bottom: 0;
+		}
+		& > div {
+			background: #FFF;
+			padding: 3%;
+			@include border-radius(3px);
+			&.contextual-links-wrapper{
+				background-color: transparent;
+				padding: 0px;
+			}
+		}
+		.view-id-events .views-row .field-content > a { font-weight: 300;}
+		.more-link {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			a {
+				display: block;
+				background: #FFF;
+				padding: .2em .5em;
+				font-size: 13px;
+				@include border-radius(3px);
+			}
+		}
+	}
+}
+
+/* FlexSlider to remove navigation dots */
+.flex-nav-container {
+	.flex-control-nav {
+		display: none;}
+}
+
+// Meta information bar in Articles
+.front .article-meta { display: none; }
+article {
+	.article-meta {
+		padding: 0 20px;
+		font-size: .825em;
+		line-height: 1em;
+		margin: 1em 0px;
+
+		overflow: hidden;
+	}
+
+	// reference to the print links
+	ul.links {
+		margin: 0;
+		padding: 10px 0 10px 0;
+		li {
+			list-style: none;
+			display: inline-block;
+			padding: 2px 0 0 22px;
+			margin: 0 15px -10px 0;
+			min-height: 25px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+			&.print_html {
+				@include icon-sprite('print');
+			}
+
+			&.print_mail {
+				@include icon-sprite('email');
+				background-position: 0 -986px;
+			}
+
+			&.print_pdf {
+				@include icon-sprite('pdf');
+				padding-left: 19px;
+			}
+		}
+	}
+}
+
+
+
+/* FOOTER */
+// @include icon-sprite('phone');
+.footer-container footer {
+	nav[role='navigation'],
+	nav[role='navigation'] + .block{
+		text-align: left;
+	}
+
+	nav[role='navigation'] {
+		border-top: none;
+
+		ul.menu {
+			
+			text-align: left;
+
+			li {
+			  border-right: 1px solid;
+
+				a {
+					color: $body-text-alt;
+					
+				}
+			}
+		}
+	}
+
+}
+/* Pager */
+#main-content .item-list {
+	text-align: left;
+}
+//This is for dropdown menus
+ul.nice-menu-down {
+    background: $main-menu-background;
+    border-radius: 5px 5px 0 0;
+    float: none;
+    z-index: 109 !important;
+    li {
+        background-color: transparent;
+        border: none;
+        &.menuparent {
+            background: none;
+            a {
+                padding-right: 30px;
+                background: url("../images/arrow-down.png") no-repeat scroll right center transparent;
+            }
+            li {
+              width: 250px;
+              a {
+                background-image: none;
+              }
+            }
+        }
+        &.over.menuparent, &.active-trail.menuparent {
+            a, a.active {
+                background: url("../images/arrow-down.png") no-repeat scroll right center $main-menu-active;
+                
+            }
+            li {
+              a, a.active {
+                background-image: none;
+              }
+            }
+        }
+        ul {
+            background: $main-menu-active;
+            top: auto;
+            border: none;
+            z-index: 110 !important;
+            position: absolute;
+            a {
+                background: $main-menu-active;
+                background-image: none;
+                border-top: 1px solid #fff;
+                text-decoration: none;
+                &:hover {
+                  background: $main-menu-background;
+                  text-decoration: none;
+                }   
+            }
+        }
+        &:first-child {
+          a {
+          border-radius: 5px 0 0 0;
+          }
+        }
+	li {
+          &:first-child {
+            a {
+              border-radius: 0;
+            }
+          }
+        }
+        a {
+            color: #fff;
+            border-right: 1px solid #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            &:hover, &.active {
+                background: $main-menu-hover;
+                text-decoration: none;
+            }
+            &.active:after {
+              content: ".";
+              position: absolute;
+              top: 100%;
+              left: 0;
+              display: block;
+              background: none;
+              margin: 0 0 0 44%;
+              width: 0;
+              height: 0;
+              font-size: 0;
+              line-height: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid $main-menu-active;
+            }
+        }
+    }
+}
+ul.nice-menu-down li ul li ul {
+    top: 0;
+    border: 1px solid #fff;
+    border-left: none;
+    box-shadow: (rgba(0,0,0, .5) 0 2px 4px);
+    li {
+        border-left: 1px solid #fff;
+        &:first-child {
+            //border-left: none;
+        }
+        a {
+            border-top: none;
+        }
+    }
+}
+.download-csv, .text-right {
+    margin-top: 15px;
+    text-align: right;
+}
+.view-taxonomy-list-page .item-list {
+    margin-top: 10px;
+}
+ul.item-check {
+    list-style: url("../images/checkbox.png");
+}
+#main-content footer {
+    display: none;
+}
+//FIXES
+/* FlexSlider Fixing for Nice Menus dropdown */
+.flex-nav-container {
+  .flex-direction-nav {
+    li a {
+	  z-index: 1;
+	}
+  }
+  .views-field.views-field-field-link {
+    z-index: 1;
+  }
+}
+//Fix for slider and menus in mobile view | fixes nice menus for mobile | fixes long titles and the mobile menu overlap
+@media screen and (max-width: $display_small_max) {
+    // Navigation for regular menus
+    
+    #main-content {
+      width: 100%;
+    }
+      
+    .header-container  {
+      
+      #mobile-link {
+        z-index: 10;
+        height: 65%;
+        margin-right: -1%;
+          span {
+              background-color: $main-menu-background;
+          }
+          &.active { background: $main-menu-background; }
+      }
+      .header-region {
+        top:auto;
+        margin-top: -133px;
+        width:102%;
+        margin-left: -1%;
+      }
+        nav[role=navigation] {            
+            ul.menu {
+              z-index: 110 !important;
+              border-top: 1px solid #fff;
+                li {
+                    a {
+                      color: #fff;
+                      background: $main-menu-background;
+                      text-decoration: none;
+                      border-bottom: 1px solid #fff;
+                      font-weight: 300 !important;
+                      letter-spacing: .08em;
+                        &:hover {
+                            background: $main-menu-hover;
+                        }
+                    }
+                    &:first-child {
+                        a {
+                          border-radius: 0;
+                          border-top: 1px solid #fff;
+                        }
+                      }
+                }
+            }
+          }
+        }
+              ul.nice-menu-down, ul.nice-menu {
+                z-index: 110 !important;
+                box-shadow: (rgba(0,0,0, .5) 0 2px 4px);
+                li, li.menuparent, li.over.menuparent, li.active-trail.menuparent {
+                    float: none;
+                    border-right: none;
+                    background: none;
+                    padding: 0;
+                    &:first-child {
+                        a {
+                          border-radius: 0;
+                          border-top: 1px solid #fff;
+                        }
+                      }
+                      
+                    a, a:active  { 
+                        color: #fff;
+                        text-align: left;
+                        background: $main-menu-background;
+                        padding: .5em 5%;
+                        border-bottom: 1px solid #fff;
+                        border-right: none;
+                        font-weight: 300 !important;
+                        font-size: 16px;
+                        letter-spacing: .08em;
+                        text-decoration: none;
+                        background-image: none !important;
+                        &:hover {
+                            background: $main-menu-hover;
+                            color: #FFF;
+                            background-image: none;
+                      }
+                    }
+                    ul {display:none !important;}
+                }
+    
+    
+    }
+    .flex-nav-container ul.flex-direction-nav {z-index: 10;}
+    .flex-nav-container .views-field.views-field-field-link a {font-size: 14px;}
+    .flex-nav-container .views-field.views-field-field-link .field-content {padding: 5px 8px; line-height: 1;}
+    
+    ul.quicktabs-tabs.quicktabs-style-zen {
+      border-bottom: none;
+      float:none;
+      li, li.active {
+        float: none;
+        a, a:hover {
+          &:before {
+            content: 'View ';
+          }
+          border: 1px solid #ccc;
+          border-radius: 0;
+          width:100%
+        }
+      }
+      li.active {
+          a.active, a.active:hover {
+            color: $body-link-hover;
+            background-color: #fff;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            &:before {
+            content: none;
+          }
+          }
+      }
+    }
+}
+//fix for no styling on em and i tags
+em, i {
+  font-style: italic;
+}
+//fixing making image max width of 95%
+img {
+  max-width: 100%;
+}
+//fixing search sizing
+input[type="text"], input[type="password"], input[type="url"], input[type="email"], input.text, input.title, textarea, select {
+    font-size: .9em;
+}
+
+// Adds a search button
+#search-block-form .form-actions  {
+    display: inline;
+    position: absolute;
+    top: -64px;
+    right: 1px;
+    input {
+        text-indent: -1000px;
+        background: url("../images/icon/searchglass.png") no-repeat scroll center white;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 0px 5px 5px 0px;
+        border: 1px solid #ccc;
+        &:hover {
+            background: url("../images/searchglass-hover.png") no-repeat scroll center $main-menu-hover;
+        }
+    }
+}
+.block.block-search .form-item-search-block-form {
+    top: -50px;
+    height: 30px;
+    right: 30px;
+    border: 1px solid #ccc;
+    background: none;
+    border-radius: 5px 0 0 5px !important;
+    border-right: none;
+    input {
+        width: 175px;
+    }
+}
+
+@media screen and (max-width: $display_small_max) {
+    .block.block-search .form-item-search-block-form {
+        height: 50px;
+    }
+    #search-block-form .form-actions {
+        top: auto;
+        right: auto;
+        input {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}

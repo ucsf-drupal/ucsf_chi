@@ -1,0 +1,46 @@
+name        = UCSF CHI Theme
+description = Sub theme of the ucsf_base theme, developed by The Center for HIV Information (chi.ucsf.edu). SASS/COMPASS based. 
+screenshot  = screenshot.png
+core        = 7.x
+
+base theme  = ucsf_base
+
+;-------------- F E A T U R E S -------------
+features[] = logo
+features[] = favicon
+features[] = name
+features[] = slogan
+;features[] = node_user_picture
+;features[] = comment_user_picture
+;features[] = comment_user_verification
+;features[] = main_menu
+;features[] = secondary_menu
+
+; CSS - General
+stylesheets[all][] = css/ucsf-chi.css
+
+#; Javascript
+#; scripts[] = js/ucsf-chi.js
+
+;-------------- R E G I O N S -------------
+;regions_hidden[] = im_a_hidden_but_visible_for_a_module
+
+;-- Required Regions
+regions[page_top]    = Page Top
+regions[content_top] = Content Top 
+regions[content]     = Content
+regions[page_bottom] = Page Bottom
+
+;-- Core Regions
+regions[top_header]     = Top Header
+regions[header]         = Header
+regions[footer_top]     = Footer Top
+regions[footer]         = Footer
+regions[sidebar_first]  = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[help]           = Help
+regions[highlighted]    = Highlighted
+
+; Plugins
+;plugins[panels][layouts] = plugins/layouts
+;plugins[panels][styles] = plugins/styles

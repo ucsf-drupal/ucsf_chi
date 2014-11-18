@@ -1,0 +1,382 @@
+.singleton-image {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.image-left {
+  float:left;
+}
+.browse-row {
+  .views-field {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    &:first-child {
+        padding-top: 0;
+    }
+  }
+}
+td {
+  &.region-box {
+    width: 50%;
+    img {
+      border: 1px solid #ccc;
+      padding: 0;
+      margin-right: 10px;
+    }
+  }
+}
+.block-quicktabs {
+  clear: both;
+  margin-top: 25px;
+}
+.sub-taxonomy-list {
+  margin-bottom: 25px;
+}
+ul.quicktabs-tabs.quicktabs-style-zen {
+  height: auto;
+  background: none;
+  margin: 0 0 15px;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  float:left;
+  width: 100%;
+  li, li.active {
+    margin: 0;
+    padding: 0;
+    background: none;
+    a, a:hover {
+      &.active {
+        background: none;
+      }
+      font: inherit;
+      background: #eee !important;
+      display: block;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  li.active {
+      a.active, a.active:hover {
+        color: $body-link-hover;
+        background-color: #fff !important;
+        padding-bottom: 1px;
+        margin-bottom: -1px;
+      }
+  }
+}
+.view-id-investigators, .view-display-id-block_7 {
+  h3 {
+    margin-top: 25px;
+  }
+}
+.view-taxonomy-menus {
+  clear: both;
+}
+table {
+  &.views-table {
+  border-bottom: 1px solid #ccc;
+    tr {
+      &.even {
+	background-color: $table-row-color;
+      }
+      &.odd {
+	background-color: #fff;
+      }
+      td {
+	&.active {
+	background-color: $callout-box-alt-1;
+	}
+      }
+    }
+  }
+}
+.view-display-id-block_9 {
+  td {
+    &.views-field-title {
+      width: 50%;
+    }
+  }
+}
+.search-results {
+  article {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    footer {
+	    display: none;
+    }
+  }
+}
+#search-form .form-type-textfield {
+  border: none;
+}
+label {
+  font-weight: normal;
+}
+.flex-caption {
+  width: 100%;
+  font-size: 10px;
+  line-height: normal;
+  color: #ddd;
+  padding: 5px;
+}
+ul {
+  list-style: url("../images/bullet.png");
+}
+li, .item-list ul li {
+  margin-bottom: 10px;
+}
+a, a:link, a:visited, a:active {
+  text-decoration: underline;
+  &:hover {text-decoration: none;}
+}
+.breadcrumb, .region-box, .view-taxonomy-menus, .views-table th, .top-region-container, .slides, .callout-box-3, .map-box, .menu, .sidebar-first.col .block .more-link, .sidebar-second.col .block .more-link  {
+  a {
+    text-decoration: none;
+  }
+}
+.form-item-jump {
+  select {
+    margin: 0 !important;
+    padding: 10px 5px !important;
+    width: 100%;
+  }
+}
+/* Bread Crumbs */
+.breadcrumb {
+	font-size: 13px;
+	text-align: right; }
+
+
+.callout-box, .callout-box-2, .callout-box-3, .col {
+  .title {
+    line-height: 1.3em;
+    margin-bottom: 5px;
+  }
+}
+// Call out box
+.view-id-callout, .callout-box, .callout-box-3 {
+	border-radius: 5px;
+	padding: 1em;
+        background-color: $callout-box;
+    * {
+      color: $main-menu-background !important;  
+    }
+    a {
+      color: $body-link-active !important;
+    }
+}
+.map-box {
+    padding: 1px 0 0 0;
+    background: url("../images/map.png") top center no-repeat #fff;;
+    p {
+        margin-bottom: 0;
+        text-align: right;
+        
+        a {
+            display: block;
+            margin-top: 175px;
+            padding: 1em;
+            background: #fff;
+            color: #ed5f10 !important;
+	    border-radius: 0 0 5px 5px;
+	    font-size: 1.2em;
+        }
+    }
+}
+.callout-box-3 {
+    padding: 0;
+    background-color: $main-menu-background;
+    * {
+      color: #fff !important;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+            border-bottom: 1px solid #fff;
+            margin-bottom: 0;
+            &:last-child {border-bottom: none;}
+                
+            a {
+                display: block;
+                padding: 1em;
+                background: url("../images/audience-arrow.png") no-repeat scroll right center transparent;
+		font-size: 1.2em;
+                color: #fff !important;
+                padding-right: 1.6em;
+            }
+            span {
+              font-size: 13px;
+              display:block;
+            }
+        }
+    }
+}
+.callout-box-alt-1 {
+	background: $callout-box-alt-1 !important;
+}
+.callout-box-alt-2 {
+	background: $callout-box-alt-2 !important;
+        *, a {
+          color: #fff !important;
+        }
+}
+.sponsor-logos, .created-logo {
+  float:left;
+    h3 {
+        font-size: .9em;
+        color: $body-text-alt;
+        text-align: left;
+    }
+    img {
+      padding: 0;
+      margin: 0;
+    }
+}
+.created-logo {
+    float: right;
+        h3 {
+        font-size: .8em;
+    }
+}
+// Sidebars related.
+.sidebar-first.col, .sidebar-second.col{
+	.block {
+		& > div {
+			background: #FFF;
+			padding: 1em;
+			@include border-radius(5px);
+			&.contextual-links-wrapper{
+				background-color: transparent;
+				padding: 0px;
+			}
+		}
+		
+	}
+}
+a.accordion {
+	text-decoration: none;
+	color: $body-link !important;
+	font-weight: 300;
+	font-size: 1.1em;
+	display: block;
+	&:before {
+		right: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:before {
+		border-width: 5px;
+		top: 5px;
+		left: 0;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		border-left: 5px solid $body-link-hover;
+	}
+	&.active:before {
+		border-width: 5px;
+		top: 5px;
+		left: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid $body-link-hover;
+	}
+}
+.accordian-content {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 15px;
+}
+
+  .top-header-region, .header-container header, .page-container, .footer-container {
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-right:0;
+    padding-left: 0;
+  }
+
+@media screen and (min-width: $display_large_max) {
+  .top-header-region, .header-container header, .page-container, .footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right:0;
+    padding-left: 0;
+  }
+}
+body.sidebar-second {
+  border-top: none !important;
+}
+/* FOOTER */
+// @include icon-sprite('phone');
+.footer-container .footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  clear:both;
+  max-width: $display-large-max;
+  margin: 0 auto;
+	nav[role='navigation'],
+	nav[role='navigation'] + .block, nav[role='navigation'] ul, nav[role='navigation'] ul.menu, .block
+        {
+	  text-align: center;
+	}
+}
+.view-id-events.view-display-id-upcoming_events_page .views-field-body .field-content > a, .view-id-news.view-display-id-page .views-field-title a {
+  text-decoration: none;
+      &:hover {
+      color: $body-link-hover;
+    }
+}
+.view-id-news.view-display-id-page .views-field-title, .view-id-events.view-display-id-upcoming_events_page .views-field-body .field-content > a, .view-display-id-upcoming_events_block .views-field-field-events-date {
+  font-weight: normal;
+  font-size: 1.3em;
+  font-family: $secondary-font;
+  line-height: 1.4em;
+}
+.view-display-id-upcoming_events_block .views-field-field-events-date {
+  font-size: 1em;
+  color: $header-title-text;
+}
+.view-id-events .views-row .event-meta, article .article-meta, blockquote {
+  background: $callout-box-alt-1;
+  font-size: .95em;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  .event-date {
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+blockquote {
+  padding: 1em;
+  font-size: 1.1em;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+span.ext, span.mailto {
+  width: 10px;
+  height: 10px;
+}
+.footer-container span.ext, .footer-container span.mailto {
+  width: 0;
+  height: 0;
+  padding-right: 0;
+}
+.header-container .block.block-search .form-item-search-block-form {
+  border-radius: 5px;
+}

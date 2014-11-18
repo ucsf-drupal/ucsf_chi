@@ -1,0 +1,4 @@
+/* FIXES CHANGES TO BASE THEME UCSF_BASE'S FOOTER BACKGROUND: same background color as body for the footer so it hides the bottom box shadow on the .page */
+.footer-container {
+  background: $body-background;
+}
