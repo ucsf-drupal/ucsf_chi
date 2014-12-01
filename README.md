@@ -1,28 +1,47 @@
-chi
-===
-To use this theme you will also need the ucsf_base theme. It is inteneded to work with the UCSF starter kit install package. With out those things you might be out of luck!
+# How to use this Sub Theme
 
-Copyright (c) 2014, Regents of the University of California
-All rights reserved.
+Main theme UCSF_BASE does NOT need to be enabled to use sub themes.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * Neither the name of the <organization> nor the
-      names of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written permission.
+Main theme is built with SASS/COMPASS. If you do not know how to setup or don't wish to do that. Can just ignore
+and use your css files as normal. 
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+The best way to use this theme would be to copy the existing themes sass and css folders to this one and
+continue building off them. 
+
+  1. Copy this STARTER_SUBTHEME to the themes folder
+  2. Rename STARTER_SUBTHEME and all references to it in your theme to your theme name
+  3. at this point you need to choose to go either with SASS/COMPASS which is setup here or CSS If you choose
+
+## Using SASS/COMPASS
+
+  1. Point your compass to this project and rename your files as nomral. Make sure to change the **STARTER_SUBTHEME.scss_** to **yourtheme.scss**
+  2. if your starting from scratch, just need to do the previous step and move on.
+  3. If you want to inherit/change original/global layout, copy the  contents of the SASS folder from the main theme to your new theme SASS folder. The variables and mixins are all in there and tie into the system.
+
+
+## Some CSS if your not using SASS
+
+If you plan to use the SASS, just copy the entire SASS directory to this directory as
+it ties together with all the variables. The list of code below isn't the full solution
+to working with the CSS but it should provide some elements to work with that are the main
+stand outs of the design.
+
+
+### Element of focus
+
+```css
+.classname-or-element {
+}
+```
+
+
+## Copyright
+
+Copyright (c) 2014 The Regents of the University of California
+
+
+
+
+
+
+
